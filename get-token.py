@@ -2,11 +2,12 @@ import requests
 
 client_id = ''
 client_secret = ''
-scope = 'api://6af8xxxxxxxxxxxxxxxxxxxxxxxx/.default'
-token_url = "https://login.microsoftonline.com/2b1aaaaa-yyy-xxxx-a96c-sdgsgvzdgzdsg/oauth2/v2.0/token"
+scope = "api://6af8xxxxxxxxxxxxxxxxxxxxxxxx/.default"
+tenant_id = input("enter your tenant ID")
+token_url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
 
 http_headers = {
-    'Content-Type':  'application/x-www-form-urlencoded',
+    "Content-Type": "application/x-www-form-urlencoded",
 }
 http_body = {
     "client_id": {client_id},
